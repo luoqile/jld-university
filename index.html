@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>加里敦大学 | Garyton University</title>
+  <style>
+    /* 全局样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    header {
+      background: linear-gradient(120deg, #1a3a6c, #2c5aa0);
+      color: white;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Banner */
+    .hero {
+      background: url('https://picsum.photos/1200/400?blur=2') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #e63946;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #d90429;
+    }
+
+    /* 主内容区 */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1a3a6c;
+      font-size: 2rem;
+    }
+    .intro p {
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    /* 学院列表 */
+    .colleges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .college-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+    }
+    .college-card h3 {
+      color: #2c5aa0;
+      margin-bottom: 10px;
+    }
+
+    /* 新闻列表 */
+    .news-item {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 4px solid #2c5aa0;
+      border-radius: 4px;
+    }
+    .news-date {
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* 招生信息 */
+    .admissions {
+      background: #eef4ff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .admissions p {
+      margin: 15px 0;
+    }
+
+    /* 联系方式 */
+    .contact-info {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    /* 页脚 */
+    footer {
+      background: #1a3a6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .college-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header>
+    <div class="logo">加里敦大学</div>
+    <nav>
+      <a href="#about">学校概况</a>
+      <a href="#colleges">学院设置</a>
+      <a href="#news">新闻动态</a>
+      <a href="#admissions">招生信息</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>追求卓越 · 启迪未来</h1>
+      <p>加里敦大学 —— 坐落于山水甲天下的桂林，致力于培养具有全球视野的创新型人才</p>
+      <a href="#admissions" class="btn">立即申请</a>
+    </div>
+  </div>
+
+  <!-- 主内容 -->
+  <div class="container">
+
+    <!-- 学校简介 -->
+    <section id="about">
+      <h2>学校概况</h2>
+      <div class="intro">
+        <p>
+          加里敦大学（Garyton University）创建于1985年，坐落于中国广西壮族自治区桂林市，是一所集文、理、工、管、艺多学科协调发展的综合性私立大学。
+          学校以“厚德博学，求是创新”为校训，现有在校生12,000余人，教职工900余名，其中高级职称教师占比超60%。
+        </p>
+        <p>
+          校园依山傍水，环境优美，拥有现代化教学楼、图书馆、实验中心及学生公寓，是学习与生活的理想之地。
+        </p>
+      </div>
+    </section>
+
+    <!-- 学院设置 -->
+    <section id="colleges">
+      <h2>学院设置</h2>
+      <div class="colleges">
+        <div class="college-card">
+          <h3>人工智能学院</h3>
+          <p>计算机科学、数据科学、机器人工程</p>
+        </div>
+        <div class="college-card">
+          <h3>经济管理学院</h3>
+          <p>金融学、工商管理、电子商务</p>
+        </div>
+        <div class="college-card">
+          <h3>人文艺术学院</h3>
+          <p>汉语言文学、视觉传达、音乐表演</p>
+        </div>
+        <div class="college-card">
+          <h3>环境与生态学院</h3>
+          <p>环境工程、生态学、旅游管理</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 新闻动态 -->
+    <section id="news">
+      <h2>新闻动态</h2>
+      <div class="news-item">
+        <div class="news-date">2026年2月5日</div>
+        <h4>我校学子在国际AI竞赛中荣获金奖</h4>
+        <p>由人工智能学院组成的“智启未来”团队在新加坡举办的全球大学生AI挑战赛中脱颖而出，斩获最高奖项。</p>
+      </div>
+      <div class="news-item">
+        <div class="news-date">2026年1月20日</div>
+        <h4>加里敦大学新图书馆正式启用</h4>
+        <p>新馆建筑面积2万平方米，藏书超80万册，配备智能借阅系统与沉浸式学习空间。</p>
+      </div>
+    </section>
+
+    <!-- 招生信息 -->
+    <section id="admissions">
+      <h2>招生信息</h2>
+      <div class="admissions">
+        <p>🎓 2026年本科招生火热进行中！</p>
+        <p>✅ 招生专业：32个本科专业，涵盖工、理、文、管、艺五大门类</p>
+        <p>✅ 奖学金：最高可获全额学费减免 + 生活补助</p>
+        <p>✅ 报名截止：2026年6月30日</p>
+        <a href="mailto:admissions@garyton.edu.cn" class="btn">咨询招生办</a>
+      </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact">
+      <h2>联系我们</h2>
+      <div class="contact-info">
+        <p>📍 地址：广西壮族自治区桂林市雁山区加里敦路88号</p>
+        <p>📞 电话：+86 (773) 1234-5678</p>
+        <p>📧 邮箱：info@garyton.edu.cn</p>
+        <p>🌐 官网：www.garyton.edu.cn（本页面即为演示版）</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>© 2026 加里敦大学 版权所有 | 虚构院校，仅供演示</p>
+  </footer>
+
+  <!-- 平滑滚动（可选） -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
