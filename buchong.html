@@ -1,0 +1,88 @@
+/* --- 新增功能样式 --- */
+
+/* 1. 暗黑模式类 */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode header,
+body.dark-mode .hero {
+  background: linear-gradient(120deg, #1e375c, #2c3e50);
+}
+body.dark-mode .admissions {
+  background: #2d3436;
+  color: #ffffff;
+}
+body.dark-mode .college-card {
+  background: #2d3436;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+body.dark-mode .news-item {
+  background: #2d3436;
+  border-left-color: #6ab04c;
+}
+
+/* 暗黑模式切换按钮 */
+.theme-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* 2. 表单样式 */
+#admissionForm input, #admissionForm select {
+  border: 1px solid #ddd;
+}
+#admissionForm input:focus, #admissionForm select:focus {
+  outline: none;
+  border-color: #2c5aa0;
+  box-shadow: 0 0 5px rgba(44, 90, 160, 0.3);
+}
+
+/* 3. 响应式优化：移动端菜单 */
+@media (max-width: 768px) {
+  /* 隐藏原本的 nav，改用 JS 控制的汉堡菜单 */
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #1a3a6c;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: left;
+  }
+  nav.show {
+    display: flex;
+  }
+  nav a {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  /* 汉堡按钮 */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+}
+
+/* 4. 图片悬停效果 */
+.college-card img, .news-item img {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.college-card img:hover, .news-item img:hover {
+  transform: scale(1.05);
+}
